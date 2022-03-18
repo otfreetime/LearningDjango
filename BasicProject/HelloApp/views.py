@@ -15,12 +15,12 @@ def index(request):
         }
     )   
       
-
-    #now = datetime.now()
-
-    #html_content = "<html><head><title>Hello, Django</title></head><body>"
-    #html_content += "<strong>Hello Django!</strong> on " + now.strftime("%A, %d %B, %Y at %X")
-    #html_content += "</body></html>"
-
-    #return HttpResponse(html_content)
-    ##return HttpResponse("Hello, Django!")
+def about(request):
+    return render(
+        request,
+        "HelloApp/about.html",
+        {
+            'title' : "About HelloApp",
+            'content' : "Example app page for Django."
+        }
+    )

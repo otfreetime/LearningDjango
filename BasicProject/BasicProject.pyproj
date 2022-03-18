@@ -45,13 +45,17 @@
     <Compile Include="BasicProject\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HelloApp\static\site.css" />
+    <Content Include="HelloApp\templates\HelloApp\about.html" />
     <Content Include="HelloApp\templates\HelloApp\index.html" />
+    <Content Include="HelloApp\templates\HelloApp\layout.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BasicProject\" />
     <Folder Include="HelloApp\" />
     <Folder Include="HelloApp\migrations\" />
+    <Folder Include="HelloApp\static\" />
     <Folder Include="HelloApp\templates\" />
     <Folder Include="HelloApp\templates\HelloApp\" />
   </ItemGroup>
