@@ -30,6 +30,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="HelloApp\admin.py" />
+    <Compile Include="HelloApp\apps.py" />
+    <Compile Include="HelloApp\migrations\__init__.py" />
+    <Compile Include="HelloApp\models.py" />
+    <Compile Include="HelloApp\tests.py" />
+    <Compile Include="HelloApp\views.py" />
+    <Compile Include="HelloApp\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="BasicProject\__init__.py" />
     <Compile Include="BasicProject\settings.py" />
@@ -37,10 +44,15 @@
     <Compile Include="BasicProject\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HelloApp\templates\HelloApp\index.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BasicProject\" />
+    <Folder Include="HelloApp\" />
+    <Folder Include="HelloApp\migrations\" />
+    <Folder Include="HelloApp\templates\" />
+    <Folder Include="HelloApp\templates\HelloApp\" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
