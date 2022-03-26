@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+<form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Search</button>
+</form>
+<ul>
+    {% for address in filter.qs %}
+    <li>{{ address.address }} </li>
+    {% endfor %}
+</ul>
+{% endblock %}

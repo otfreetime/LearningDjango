@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title></title>
+
+    <link rel="stylesheet" href="https://unpkg.com/@trevoreyre/autocomplete-js/dist/style.css" />
+</head>
+
+<body>
+
+    {{ content }}
+
+    <div id="autocomplete" class="autocomplete">
+        <input class="autocomplete-input" />
+        <ul class="autocomplete-result-list"></ul>
+    </div>
+
+    <div id="autocomplete1" class="autocomplete">
+        <input class="autocomplete-input" />
+        <ul class="autocomplete-result-list"></ul>
+    </div>
+
+    <script src="https://unpkg.com/@trevoreyre/autocomplete-js"></script>
+
+    <script>
+        new Autocomplete('#autocomplete', {
+            search: input => {
+                /* console.log(input)*/
+                const url = `/search/?address=${input}`
+               /* console.log(url)*/
+                return new Promise(resolve => {
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                           /* console.log(data)*/
+                            resolve(data.data)
+                        })
+                })
+            },
+            onSubmit: result => {
+                //console.log(result)
+                //window.open(`/places/?search=${result}`)
+            }
+        })
+
+        new Autocomplete('#autocomplete1', {
+            search: input => {
+                /* console.log(input)*/
+                const url = `/search/?address=${input}`
+               /* console.log(url)*/
+                return new Promise(resolve => {
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                           /* console.log(data)*/
+                            resolve(data.data)
+                        })
+                })
+            },
+            onSubmit: result => {
+                //console.log(result)
+                //window.open(`/places/?search=${result}`)
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{% extends 'devApp/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="post" novalidate>
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-6">
+            {{ form.code|as_crispy_field }}
+        </div>
+        <div class="col-6">
+            {{ form.endesc|as_crispy_field }}
+        </div>
+    </div>
+    {{ form.remarks|as_crispy_field }}
+    <div class="row">
+        <div class="col-6">
+            {{ form.ardesc|as_crispy_field }}
+        </div>
+        <div class="col-6">
+            {{ form.category|as_crispy_field }}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+{% endblock %}

@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^$', HelloApp.views.index, name='index'),
     url(r'^home$', HelloApp.views.index, name='home'),
     url(r'^about$', HelloApp.views.about, name='about'),
+   
 ]

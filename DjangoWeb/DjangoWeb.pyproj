@@ -5,11 +5,12 @@
     <Name>DjangoWeb</Name>
     <RootNamespace>DjangoWeb</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>ec176bdb-673b-4fef-a8a0-e285e966aa54</ProjectGuid>
+    <ProjectGuid>0f3f0186-318a-41be-ac6f-af2e313c1db7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <StartupFile>manage.py</StartupFile>
@@ -56,6 +57,7 @@
     <Folder Include="DjangoWeb\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\loggedoff.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
