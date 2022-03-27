@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Press Releases</title>
+</head>
+<body>
+<h1>Press Releases</h1>
+<ul>
+{% for press in press_list %}
+<li>
+<a href="/press/detail/{{ press.id }}/">
+{{ press.title }}</a>
+</li>
+{% endfor %}
+</ul>
+</body>
+</html>
