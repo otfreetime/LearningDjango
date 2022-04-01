@@ -362,3 +362,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /BasicProject/env
+django-autocomplete-light
+django-autocomplete-light
